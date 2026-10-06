@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Real-Time Micro-Expression and Lie Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_detection/face_detection.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api/dist/face-api.min.js"></script>
+</head>
+
+<body id="home">
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <h1>AI REAL-TIME MICRO-EXPRESSION AND LIE ANALYZER</h1>
+
+    <p>
+        Welcome to our AI-powered system for real-time
+        micro-expression and lie analysis.
+    </p>
+
+    <button onclick="startAnalysis()">Start Analysis</button>
+
+    <div id="camera-section">
+
+        <h2>Live Camera Analysis</h2>
+
+        <video id="camera" autoplay playsinline></video>
+
+       <h3 id="expression-result">Expression: Waiting...</h3>
+<h3 id="confidence-result">Confidence: --</h3>
+<p id="analysis-message">Analysis result will appear here.</p>
+<h3 id="lie-result">Analysis Result: Waiting...</h3>       
+<div id="history-section">
+
+    <details>
+        <summary>Expression History</summary>
+
+        <div id="history-list">
+            No expression history yet.
+        </div>
+
+    </details>
+
+</div>
+<div class="camera-buttons">
+            <button onclick="openCamera()">Open Camera</button>
+            <button onclick="switchCamera()">Switch Camera</button>
+            <button onclick="stopCamera()">Stop Camera</button>
+        </div>
+
+        <p id="camera-status">Camera is ready</p>
+
+    </div>
+
+    <section id="about">
+
+        <h2>About Our Project</h2>
+
+        <p>
+            AI Real-Time Micro-Expression and Lie Analyzer is an
+            AI-based project designed to analyze facial expressions
+            and identify possible emotional changes in real time.
+        </p>
+
+    </section>
+
+    <section id="features">
+
+        <h2>Our Features</h2>
+
+        <div>
+            <h3>😊 Micro-Expression Detection</h3>
+            <p>Detects subtle facial expression changes.</p>
+        </div>
+
+        <div>
+            <h3>🤖 AI-Based Analysis</h3>
+            <p>Uses AI techniques to analyze facial expressions.</p>
+        </div>
+
+        <div>
+            <h3>📷 Real-Time Camera</h3>
+            <p>Allows real-time facial analysis using a camera.</p>
+        </div>
+
+        <div>
+            <h3>📊 Result Display</h3>
+            <p>Displays the analysis results clearly to the user.</p>
+        </div>
+
+    </section>
+
+    <section id="how-it-works">
+
+        <h2>How It Works</h2>
+
+        <div>
+            <h3>1. 📷 Camera Input</h3>
+            <p>The system captures the user's facial expressions through the camera.</p>
+        </div>
+
+        <div>
+            <h3>2. 👤 Face Detection</h3>
+            <p>The system detects and tracks the face from the camera input.</p>
+        </div>
+
+        <div>
+            <h3>3. 🤖 AI Analysis</h3>
+            <p>AI analyzes facial movements and expression changes.</p>
+        </div>
+
+        <div>
+            <h3>4. 📊 Result</h3>
+            <p>The analysis result is displayed on the screen.</p>
+        </div>
+
+    </section>
+
+    <section id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>For more information about our project, please contact us.</p>
+
+        <h3>AI Real-Time Micro-Expression and Lie Analyzer</h3>
+
+        <p>Department of Computer Science</p>
+
+        <p>J.K.K. Nataraja College of Arts and Science (Autonomous)</p>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
