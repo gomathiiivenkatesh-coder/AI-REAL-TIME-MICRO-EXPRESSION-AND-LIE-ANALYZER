@@ -272,7 +272,7 @@ function stopCamera() {
         "Analysis result will appear here.";
 }async function testBackendConnection() {
     try {
-        const response = await fetch("http://127.0.0.1:5000/api/status");
+        const response = await fetch("https://ai-real-time-micro-expression-and-lie.onrender.com/api/status");
         const data = await response.json();
 
         console.log(data.message);
@@ -284,7 +284,7 @@ function stopCamera() {
 testBackendConnection();
 async function sendExpressionToBackend(expression, confidence) {
     try {
-        const response = await fetch("http://127.0.0.1:5000/api/expression", {
+    const response = await fetch("https://ai-real-time-micro-expression-and-lie.onrender.com/api/expression", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -307,7 +307,7 @@ loadExpressionHistory();
 async function loadExpressionHistory() {
     try {
         const response = await fetch(
-            "http://127.0.0.1:5000/api/history"
+            "https://ai-real-time-micro-expression-and-lie.onrender.com/api/history"
         );
 
         const data = await response.json();
