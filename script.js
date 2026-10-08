@@ -137,7 +137,9 @@ const lieResult =
 
                 const detectedExpression = bestExpression[0];
 const confidence = bestExpression[1];
-
+console.log("Angry confidence:", detection.expressions.angry);
+console.log("All expressions:", detection.expressions);
+console.log("Detected expression:", detectedExpression);
 if (detectedExpression === lastExpression) {
     expressionCount++;
 } else {
@@ -145,7 +147,7 @@ if (detectedExpression === lastExpression) {
     expressionCount = 1;
 }
 
-if (expressionCount >= requiredFrames) {
+if (expressionCount === requiredFrames) {
 
     expressionResult.textContent =
         "Expression: " + detectedExpression;
@@ -154,15 +156,13 @@ if (expressionCount >= requiredFrames) {
         "Confidence: " +
         Math.round(confidence * 100) + "%";
 
+    analysisMessage.textContent =
+        "Facial expression detected successfully.";
+
     sendExpressionToBackend(
         detectedExpression,
         confidence
     );
-
-    analysisMessage.textContent =
-        "Facial expression detected successfully.";
-
-    loadExpressionHistory();
 }
 if (detectedExpression === "happy") {
     lieResult.textContent =
