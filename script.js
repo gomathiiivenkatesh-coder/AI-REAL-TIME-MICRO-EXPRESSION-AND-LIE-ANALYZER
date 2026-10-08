@@ -153,12 +153,17 @@ if (expressionCount >= requiredFrames) {
     confidenceResult.textContent =
         "Confidence: " +
         Math.round(confidence * 100) + "%";
-sendExpressionToBackend(
-    detectedExpression,
-    confidence
-);
-loadExpressionHistory();
-    }
+
+    sendExpressionToBackend(
+        detectedExpression,
+        confidence
+    );
+
+    analysisMessage.textContent =
+        "Facial expression detected successfully.";
+
+    loadExpressionHistory();
+}
 if (detectedExpression === "happy") {
     lieResult.textContent =
         "Analysis Result: Positive facial expression detected";
