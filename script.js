@@ -182,7 +182,7 @@ if (detectedExpression === "happy") {
 }
 
                 expressionResult.textContent =
-                    "Expression: " + expression;
+                    "Expression: " + detectedExpression;
 
                 confidenceResult.textContent =
                     "Confidence: " +
